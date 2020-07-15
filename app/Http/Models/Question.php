@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Model;
+namespace App\Http\Models;
+
+use Str;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,8 +18,8 @@ class Question extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function setTittleAttrribute($value){
+    public function setTitleAttribute($value){
         $this->attributes['title'] = $value;
-        $this->attributes['slug'] = Str::slug($value)
+        $this->attributes['slug'] = Str::slug($value);
     }
 }

@@ -38,6 +38,6 @@ class User extends Authenticatable
     ];
 
     public function questions(){
-        return $this->hasMany(App\Http\Model\Question::class);
+        return $this->hasMany(Http\Models\Question::class);
     } 
 }
